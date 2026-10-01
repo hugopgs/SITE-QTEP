@@ -1,0 +1,354 @@
+[
+  {
+    "firstName": "Timothée",
+    "lastName": "Mounier",
+    "promotion": "2025",
+    "internship": {
+      "title": "Robust and coherent control of quantum dots",
+      "institution": "Universität Innsbruck",
+      "place": "Innsbruck - Autriche"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Universität Basel",
+      "place": "Bâle - Suisse",
+      "supervisor": "Richard Warburton"
+    }
+  },
+  {
+    "firstName": "Jelil",
+    "lastName": "Belheine",
+    "promotion": "2025",
+    "internship": {
+      "title": "Generating Entangled Photons Through Non-Classical Raman Processes for Quantum Imaging",
+      "institution": "Laboratoire Kastler Brossel (LKB-ENS)",
+      "place": "Paris - France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Laboratoire de Physique de l'École Normale Supérieure (LPENS)",
+      "place": "Paris - France",
+      "supervisor": "Christophe Voisin et Yannick Chassagneux"
+    }
+  },
+  {
+    "firstName": "Pierre-Armand",
+    "lastName": "Barbieri",
+    "promotion": "2025",
+    "internship": {
+      "title": "Investigating Gatemon superconducting qubit",
+      "institution": "Center for Quantum Devices - Niels Bohr Institute",
+      "place": "Copenhagen - Denmark"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Universität Basel - Quantum Coherence lab",
+      "place": "Bâle - Suisse",
+      "supervisor": "Dominik Zumbühl"
+    }
+  },
+  {
+    "firstName": "Benoit",
+    "lastName": "Brouillet",
+    "promotion": "2025",
+    "internship": {
+      "title": "Developing a laser system to create a continuous cold strontium atomic cloud",
+      "institution": "Universiteit van Amsterdam - Institute of Physics",
+      "place": "Amsterdam - Netherlands"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Universiteit van Amsterdam-Institute of Physics- Strontium quantum gases group",
+      "place": "Amsterdam - Netherlands",
+      "supervisor": "Florian Schreck"
+    }
+  },
+  {
+    "firstName": "Gatien",
+    "lastName": "Roger",
+    "promotion": "2025",
+    "internship": {
+      "title": "Quantum Error Correction Code resilient against correlated atom loss",
+      "institution": "Centre Européen des Sciences Quantiques",
+      "place": "Strasbourg - France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "University of Luxembourg - Maison du Nombre - Department of Computer Science (DCS)",
+      "place": "Esch-sur-Alzette - Luxembourg",
+      "supervisor": "Marko Rancic"
+    }
+  },
+  {
+    "firstName": "Nathan",
+    "lastName": "Niess",
+    "promotion": "2025",
+    "internship": {
+      "title": "Dépasser la limite quantique standard dans un gravimetre à atomes froids",
+      "institution": "Laboratoire Temps-Espace (LTE)",
+      "place": "Paris - France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Observatoire de Paris - PSL, Laboratoire Temps-Espace LTE",
+      "place": "Paris - France",
+      "supervisor": "Franck Pereira Dos Santos, Quentin Beaufils"
+    }
+  },
+  {
+    "firstName": "Guerrero",
+    "lastName": "Castillo",
+    "promotion": "2025",
+    "internship": {
+      "title": "Parity-protected hybrid semiconductor-superconductor qubit",
+      "institution": "Institut Néel",
+      "place": "Grenoble, France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Parity-protected hybrid semiconductor-superconductor qubit",
+      "place": "Grenoble - France",
+      "supervisor": "Johann Coraux, Julien Renard"
+    }
+  },
+  {
+    "firstName": "Aurélien",
+    "lastName": "Argy",
+    "promotion": "2025",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Marie",
+    "lastName": "Taouzinet",
+    "promotion": "2025",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "Ingénieur",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Tom",
+    "lastName": "Thinel",
+    "promotion": "2025",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Philippe",
+    "lastName": "Nedeljkovic",
+    "promotion": "2025",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Enzo",
+    "lastName": "Bocquel",
+    "promotion": "2026",
+    "internship": {
+      "title": "Optical and electronic systems for the construction of a neutral atom quantum computer",
+      "institution": "CESQ - Université de Strasbourg",
+      "place": "Strasbourg - France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "CESQ - Université de Strasbourg",
+      "place": "Strasbourg - France",
+      "supervisor": "Shannon Whitlock"
+    }
+  },
+  {
+    "firstName": "Roman",
+    "lastName": "Bonnet",
+    "promotion": "2026",
+    "internship": {
+      "title": "Laser cooling and thermometry of long ion strings.",
+      "institution": "CESQ - Université de Strasbourg",
+      "place": "Strasbourg - France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Cyprien",
+    "lastName": "Charlot",
+    "promotion": "2026",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Mohamed Hedi",
+    "lastName": "Dridi",
+    "promotion": "2026",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Taha",
+    "lastName": "Eddouadi",
+    "promotion": "2026",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Bastien",
+    "lastName": "Favre",
+    "promotion": "2026",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Kimvy",
+    "lastName": "Hagen",
+    "promotion": "2026",
+    "internship": {
+      "title": "Mise en place et caractérisation d'une source de tension Josephson en alternatif",
+      "institution": "Laboratoire National de Métrologie et d'Essais (LNE)",
+      "place": "Trappes - France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "Laboratoire National de Métrologie et d'Essais (LNE)",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Matthias",
+    "lastName": "Jacques",
+    "promotion": "2026",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Luc",
+    "lastName": "Pachot",
+    "promotion": "2026",
+    "internship": {
+      "title": "SPIN QUBIT : Numerical modelling of global and Local Control",
+      "institution": "University Basel - NCCR SPIN",
+      "place": "Basel - Switzerland"
+    },
+    "job": {
+      "title": "",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  },
+  {
+    "firstName": "Hugo",
+    "lastName": "Pagès",
+    "promotion": "2026",
+    "internship": {
+      "title": "Development of a cryogenic platform for the manipulation of circular Rydberg atoms",
+      "institution": "LKB - Rydberg atoms group - Collège de France",
+      "place": "Paris-France"
+    },
+    "job": {
+      "title": "Doctorant",
+      "institution": "LKB-Rydberg atoms group- Collège de france",
+      "place": "Paris-France",
+      "supervisor": "Clément Sayrin; Michel Brune"
+    }
+  },
+  {
+    "firstName": "Arthur",
+    "lastName": "Oréal",
+    "promotion": "2026",
+    "internship": {
+      "title": "",
+      "institution": "",
+      "place": ""
+    },
+    "job": {
+      "title": "",
+      "institution": "",
+      "place": "",
+      "supervisor": ""
+    }
+  }
+]
