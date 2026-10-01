@@ -8,7 +8,7 @@
 //   F POSTE ACTUEL | G INSTITUTION | H VILLE - PAYS | I DIRECTEUR THESE
 // - "VILLE - PAYS" s'écrit "Ville - Pays" (ex : "Esch-sur-Alzette - Luxembourg" ou "Grenoble, France")
 
-const XLSX_FILE = 'Suivi_promotion.xlsx';
+const XLSX_FILE = '../data/Suivi_promotion.xlsx';
 
 // Noms des promotions (facultatif : sans nom, on affiche "Promotion 2027")
 const PROMOTION_NAMES = {

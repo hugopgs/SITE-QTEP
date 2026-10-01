@@ -70,15 +70,14 @@
             background-color: white;
             min-width: 180px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            z-index: 99999;       /* PLUS GRAND QUE TOUT */
+            z-index: 100;
             right: 0;
-            top: 60px;            /* Ajuste selon la hauteur du header */
+            top: 45px;
             border-radius: 4px;
-            overflow: visible;    /* pour ne pas couper le contenu */
+            overflow: hidden;
             animation: fadeIn 0.3s ease;
             padding: 5px 0;
         }
-
         
         @keyframes fadeIn {
             from {
@@ -108,15 +107,13 @@
             padding-left: 20px;
         }
         
-     
-        .menu:hover .dropdown-content,
+        /* Menu qui reste affiché au hover et quand on clique */
+                .menu:hover .dropdown-content,
 .menu:focus-within .dropdown-content {
     display: block;
 }
-
-        
         .main-wrapper {
-            flex: 1; /
+            flex: 1; /* Cette partie prendra tout l'espace disponible */
         }
         
         .content {
@@ -250,116 +247,183 @@
             }
         }
         .team-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 40px;
-            flex-wrap: nowrap;   /* forces one horizontal line */
-            margin-top: 20px;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap;   /* forces one horizontal line */
+    margin-top: 20px;
+}
 
-        .team-card {
-            width: 170px;
-            height: 220px;  /* FORCE same height for all cards */
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 4px;
-        }
+.team-card {
+    width: 170px;
+    height: 220px;  /* FORCE same height for all cards */
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+}
 
-        .team-card img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
+.team-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 
-            display: block;        /* allows centering */
-            margin: 0 auto;        /* centers the image horizontally */
-        }
+    display: block;        /* allows centering */
+    margin: 0 auto;        /* centers the image horizontally */
+}
 
-        .team-card h3 {
-            font-size: 1em;
-            margin: 6px 0 4px 0;
-        }
+.team-card h3 {
+    font-size: 1em;
+    margin: 6px 0 4px 0;
+}
 
-        .team-card p {
-            font-size: 0.85em;
-            margin: 3px 0;
-        }
+.team-card p {
+    font-size: 0.85em;
+    margin: 3px 0;
+}
 
-        .team-card a {
-            font-size: 0.8em;
-            color: #0066cc;
-            text-decoration: none;
-        }
+.team-card a {
+    font-size: 0.8em;
+    color: #0066cc;
+    text-decoration: none;
+}
 
-        .team-card a:hover {
-            text-decoration: underline;
-        }
-    </style>
+.team-card a:hover {
+    text-decoration: underline;
+}
+
+
+.content ul {
+    list-style-type: disc;      /* Puces normales */
+    list-style-position: outside; /* Puces à l'extérieur */
+    padding-left: 20px;          /* Espace uniforme pour toutes les puces */
+    margin-left: 150px;
+}
+
+.content ul li {
+    margin-bottom: 10px;        /* Espace entre les items */
+    text-align: left;            /* Assure que le texte est aligné à gauche */
+}
+
+
+
+
+</style>
+
 </head>
-
 <body>
-    <div class="header">
-        <div class="header-title">
-            <i class="fa-solid fa-envelope"></i>
-            Contact - Network QTEP 
-        </div>
-        <div class="menu">
-            <button class="menu-button">Menu</button>
-            <div class="dropdown-content">
-                <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
-                <a href="suivi.html"><i class="fas fa-user-graduate"></i> Suivi des Promotions</a>
-                <a href="conseils.html"><i class="fas fa-lightbulb"></i> Conseils</a>
-                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
-            </div>
+
+<div class="header">
+    <div class="header-title">
+        <i class="fas fa-lightbulb"></i>
+        Conseils - Network QTEP
+    </div>
+    <div class="menu">
+        <button class="menu-button">Menu</button>
+        <div class="dropdown-content">
+            <a href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+            <a href="suivi.html"><i class="fas fa-user-graduate"></i> Suivi des Promotions</a>
+            <a href="conseils.html"><i class="fas fa-lightbulb"></i> Conseils </a>
+            <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
         </div>
     </div>
-    <div class="content">
-    <h2>Contact</h2>
-    <p>Pour toute question générale, vous pouvez écrire à :
-        <a href="mailto:contact.qtep@gmail.com">contact.qtep@gmail.com</a>
-    </p>
-
-    <!-- <div class="team-container">
-
-        <div class="team-card">
-            <img src="jelil.png" alt="Photo Jelil">
-            <h3>Jelil Belheine</h3>
-            
-            <a href="mailto:jelil@networkqtep.com">jelil@networkqtep.com</a>
-        </div>
-
-        <div class="team-card">
-            <img src="timothee.png" alt="Photo Timothée">
-            <h3>Timothée Mounier</h3>
-            
-            <a href="mailto:timothee@networkqtep.com">timothee@networkqtep.com</a>
-        </div>
-
-        <div class="team-card">
-            <img src="images/pierre.jpg" alt="Photo Pierre Armand Barbieri">
-            <h3>Pierre Armand Barbieri</h3>
-           
-            <a href="mailto:pierre@networkqtep.com">pierre@networkqtep.com</a>
-        </div>
-
-        <div class="team-card">
-            <img src="images/adan.jpg" alt="Photo Adan Guerrero">
-            <h3>Adan Guerrero</h3>
-            
-            <a href="mailto:adan@networkqtep.com">adan@networkqtep.com</a>
-        </div>
-
-    </div>--->
 </div>
- <footer>
-        &copy; 2025 Network QTEP - Tous droits réservés
-    </footer>
+</div>
+
+<div class="advice-section">
+
+    <div class="content">
+        <h2>Offres de stage, thèses </h2>
+        <p>Ces quelques sites permettent de recenser les offres disponibles.</p>
+        <ul>
+           
+            <li>
+        En France, les masters de physique liés à l'École Normale Supérieure ou Université Paris Cité recensent une liste de sujets variés pour le stage de master 2  + thèse : 
+       <a href="https://stages.phys.ens.psl.eu/fr/Select" target="_blank" rel="noopener noreferrer">
+    Sujets de master recensés par l'ENS
+        </a>,
+    <br>
+        <a href="https://drive.google.com/drive/u/0/folders/1yVKJ1oY1OwkG0047-G-b3HGlfuhgSm5V" target="_blank" rel="noopener noreferrer">
+            Sujets de master recensés par Université Paris Cité
+        </a>
+
+    </li>
+        <li>
+        <a href="https://www.quantiki.org/" target="_blank" rel="noopener noreferrer">
+            Quantiki
+        </a> – Le site Quantiki recense les différents groupes dans le monde dans le domaine de l'informatique quantique et de l'optique quantique. Vous pourrez découvrir les groupes et contacter les professeurs pour des offres de stages/thèses.
+    
+    </li>
+    </div>
+
+    <div class="content">
+        <h2>Quelques conseils </h2>
+
+
+        <ul>
+        <li>Parler aux <strong>thésards actuels</strong> du groupe (ambiance, charge, encadrement).</li>
+        <li>Contacter un <strong>ancien du groupe</strong> pour un retour honnête.</li>
+        <li>Regarder si un <strong>ancien de QTEP</strong> est passé par ce labo (contact facile, infos précises).</li>
+  <li>
+        S’abonner à la mailing list des <strong>Groupements De Recherches (GDR)</strong> (France) du domaine pour les annonces de conférences, postes, etc. 
+        (Ex : <a href="https://gdr-teq.cnrs.fr/" target="_blank" rel="noopener noreferrer">GDR TeQ</a>, <a href="http://gdr-howdi.org/?lang=en" target="_blank" rel="noopener noreferrer">GDR HOWDI</a>, etc)
+    </li>
+        <li>Lire quelques <strong>publications récentes</strong> du groupe pour vérifier l’activité réelle.</li>
+        <li>Vérifier la <strong>réputation du directeur</strong> : encadrement, présence, bienveillance.</li>
+    </ul>
+    </div>
+
+</div>
+
+<script>
+let headers = document.getElementsByClassName("advice-header");
+
+for (let i = 0; i < headers.length; i++) {
+    headers[i].addEventListener("click", function() {
+        const next = this.nextElementSibling;
+        next.style.display = next.style.display === "block" ? "none" : "block";
+    });
+}
+</script>
+
+
+<footer>
+    &copy; 2025 Network QTEP - Tous droits réservés
+</footer>
+<script>
+    // Ajout d'une animation simple au chargement de la page
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.style.opacity = '1';
+        
+        // Gestion du menu pour qu'il reste ouvert au clic
+        const menuButton = document.querySelector('.menu-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        
+        menuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdownContent.classList.toggle('dropdown-active');
+        });
+        
+        // Fermer le menu quand on clique ailleurs
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.menu')) {
+                dropdownContent.classList.remove('dropdown-active');
+            }
+        });
+        
+        // Empêcher la fermeture du menu au clic sur ses éléments
+        dropdownContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+</script>
 </body>
 </html>
