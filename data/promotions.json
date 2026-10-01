@@ -1,21 +1,5 @@
 [
   {
-    "firstName": "Santa",
-    "lastName": "Claus",
-    "promotion": "1",
-    "internship": {
-      "title": "Present making for children",
-      "institution": "",
-      "place": "Rovaniemi Finland"
-    },
-    "job": {
-      "title": "Santa Claus",
-      "institution": "",
-      "place": "Rovaniemi Finland",
-      "supervisor": ""
-    }
-  },
-  {
     "firstName": "Timothée",
     "lastName": "Mounier",
     "promotion": "2025",
