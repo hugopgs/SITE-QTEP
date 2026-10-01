@@ -760,7 +760,6 @@
         &copy; 2025 Network QTEP - Tous droits réservés
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="../js/promotions-xlsx.js"></script>
     <script>
 // ---------- Utilitaires ----------
@@ -792,7 +791,7 @@ function promoName(year) {
     return (PROMOTIONS[year] && PROMOTIONS[year].name) || `Promotion ${year}`;
 }
 
-// Données chargées depuis Suivi_promotion.xlsx (voir promotions-xlsx.js)
+// Données chargées depuis promotions.json (voir promotions-xlsx.js)
 let PEOPLE = [];
 let PROMOTIONS = {};
 let sortedYears = [];
@@ -1140,20 +1139,17 @@ function initFilters() {
 
 function showLoadError(error) {
     console.error(error);
-    const onLocalFile = location.protocol === 'file:';
     document.getElementById('promotions-list').innerHTML = `
         <div class="card empty">
-            <p><strong>Impossible de lire ${esc(XLSX_FILE)}.</strong></p>
-            <p class="muted">${onLocalFile
-                ? 'Le navigateur bloque la lecture du fichier Excel quand la page est ouverte en double-cliquant dessus. Ouvrez le site depuis un serveur (site en ligne, ou "python -m http.server" dans le dossier du site).'
-                : esc(error.message)}</p>
+            <p><strong>Impossible de lire ${esc(PROMOTIONS_JSON_FILE)}.</strong></p>
+            <p class="muted">${esc(error.message)}</p>
         </div>`;
 }
 
 async function init() {
     document.getElementById('promotions-list').innerHTML = '<div class="card empty"><i class="fas fa-spinner fa-spin"></i> Chargement des promotions…</div>';
     try {
-        ({ promotions: PROMOTIONS, people: PEOPLE } = await loadPromotionsFromXlsx());
+        ({ promotions: PROMOTIONS, people: PEOPLE } = await loadPromotionsFromJson());
     } catch (error) {
         showLoadError(error);
         return;

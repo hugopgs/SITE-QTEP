@@ -1,5 +1,4 @@
-// Lecture du fichier Suivi_promotion.xlsx pour la page "Suivi des promotions".
-// Pour mettre à jour le site : modifier le fichier Excel et le remettre en ligne, rien d'autre.
+// Lecture des promotions publiées dans data/promotions.json.
 //
 // Format attendu du fichier Excel :
 // - un onglet par promotion, nommé "Promotion 2025", "Promotion 2026", ...
@@ -8,7 +7,7 @@
 //   F POSTE ACTUEL | G INSTITUTION | H VILLE - PAYS | I DIRECTEUR THESE
 // - "VILLE - PAYS" s'écrit "Ville - Pays" (ex : "Esch-sur-Alzette - Luxembourg" ou "Grenoble, France")
 
-const XLSX_FILE = '../data/Suivi_promotion.xlsx';
+const PROMOTIONS_JSON_FILE = '../data/promotions.json';
 
 // Noms des promotions (facultatif : sans nom, on affiche "Promotion 2027")
 const PROMOTION_NAMES = {
@@ -135,22 +134,37 @@ function parseSheet(rows, year) {
     return people;
 }
 
-// Lit le fichier Excel et renvoie { promotions, people }
-async function loadPromotionsFromXlsx() {
-    const response = await fetch(XLSX_FILE, { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`${XLSX_FILE} introuvable (${response.status})`);
-    const workbook = XLSX.read(await response.arrayBuffer(), { type: 'array' });
+function parsePublicEntry(raw, supervisor = '') {
+    if (!raw) return null;
+    const place = parseCityCountry(raw.place);
+    const entry = {
+        title: clean(raw.title),
+        institution: clean(raw.institution)
+    };
+    if (supervisor) entry.supervisor = clean(supervisor);
+    if (place) Object.assign(entry, place);
+    return (entry.title || entry.institution || place) ? entry : null;
+}
 
-    let people = [];
-    const years = [];
-    workbook.SheetNames.forEach(sheetName => {
-        const match = sheetName.match(/(\d{4})/);
-        if (!match) return;
-        const year = match[1];
-        const rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1, defval: null });
-        years.push(year);
-        people = people.concat(parseSheet(rows, year));
+// Lit le fichier JSON public et renvoie { promotions, people }
+async function loadPromotionsFromJson() {
+    const response = await fetch(PROMOTIONS_JSON_FILE, { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`${PROMOTIONS_JSON_FILE} introuvable (${response.status})`);
+    const rows = await response.json();
+
+    const people = rows.map(raw => {
+        const person = {
+            firstName: clean(raw.firstName),
+            lastName: clean(raw.lastName),
+            promotion: clean(raw.promotion),
+            internship: parsePublicEntry(raw.internship),
+            job: parsePublicEntry(raw.job, raw.job && raw.job.supervisor)
+        };
+        if (person.job) person.job.type = jobType(person.job.title) || 'other';
+        return person;
     });
+
+    const years = [...new Set(people.map(person => person.promotion).filter(Boolean))];
 
     const promotions = {};
     years.sort((a, b) => b - a).forEach((year, i) => {
